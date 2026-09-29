@@ -1,0 +1,81 @@
+/* Selector universal: incluye el padding y bordes dentro del ancho/alto total de todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Reglas generales para la totalidad del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente tipográfica general */
+    background-color: #f2f2f2;     /* Establece un fondo gris claro */
+    margin: 0;                      /* Elimina los márgenes externos por defecto */
+    padding: 0;                     /* Elimina el relleno interno por defecto */
+}
+
+/* Reglas del contenedor principal donde está la tarjeta central */
+.contenedor {
+    width: 450px;                            /* Fija un ancho de 450 píxeles */
+    margin: 50px auto;                       /* Centra la tarjeta horizontalmente y da 50px de margen vertical */
+    background-color: white;                 /* Asigna color de fondo blanco */
+    padding: 30px;                           /* Crea un colchón interno de 30 píxeles */
+    border-radius: 10px;                     /* Redondea las esquinas a 10 píxeles */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);/* Aplica una sombra suave alrededor */
+}
+
+/* Estilos aplicados al título principal dentro del contenedor */
+h1 {
+    text-align: center;   /* Centra el texto */
+    margin-bottom: 10px;  /* Aplica un espacio inferior de 10 píxeles */
+}
+
+/* Estilos aplicados a los párrafos descriptivos */
+p {
+    text-align: center; /* Centra el texto */
+    color: #666;        /* Aplica un tono de texto gris medio */
+}
+
+/* Estilos del contenedor interno del formulario */
+.formulario {
+    display: flex;          /* Activa el modelo de caja flexible (Flexbox) */
+    flex-direction: column; /* Apila los elementos verticalmente (en columna) */
+}
+
+/* Estilos para todas las etiquetas del formulario */
+label {
+    margin-top: 15px;    /* Espacio superior respecto al elemento previo */
+    margin-bottom: 5px;   /* Espacio inferior cercano al input correspondiente */
+    font-weight: bold;    /* Pone la letra en negrita */
+}
+
+/* Estilos para los campos de captura de datos */
+input {
+    padding: 10px;          /* Espacio interno para que el texto respire */
+    border: 1px solid #ccc; /* Borde delgado gris claro */
+    border-radius: 5px;     /* Bordes suavemente redondeados */
+    font-size: 16px;        /* Tamaño de fuente legible */
+}
+
+/* Estilos base para los botones del formulario */
+button {
+    margin-top: 25px;       /* Margen superior de separación */
+    padding: 12px;          /* Tamaño del área cliqueable */
+    background-color: #007bff; /* Color de fondo azul principal */
+    color: white;           /* Texto en color blanco */
+    border: none;           /* Remueve el borde metálico por defecto */
+    border-radius: 5px;     /* Esquinas redondeadas */
+    font-size: 16px;        /* Tamaño de texto relativo */
+    cursor: pointer;        /* Muestra el puntero de mano al pasar el cursor */
+}
+
+/* Efecto hover: se activa al pasar el ratón sobre un botón */
+button:hover {
+    background-color: #0056b3; /* Cambia el color a un azul más oscuro */
+}
+
+/* Estilos para el bloque de reporte de resultados */
+.resultado {
+    margin-top: 25px;   /* Separación superior */
+    padding: 15px;      /* Espacio interno del bloque */
+    text-align: center; /* Centra el texto desplegado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px;    /* Tamaño de texto ligeramente más grande */
+}

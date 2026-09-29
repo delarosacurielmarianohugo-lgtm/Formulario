@@ -1,0 +1,116 @@
+<!-- Indica al navegador que el documento sigue el estándar HTML5 -->
+<!DOCTYPE html>
+
+<!-- Define el elemento raíz del documento y establece el idioma en español -->
+<html lang="es">
+
+<head>
+    <!-- Define la codificación de caracteres en UTF-8 para soportar acentos y la ñ -->
+    <meta charset="UTF-8">
+
+    <!-- Configura la vista para que la página sea adaptable a pantallas de dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define el título que se mostrará en la pestaña del navegador -->
+    <title>Sistema de Calificaciones</title>
+
+    <!-- Enlaza el archivo de estilos CSS externo (estilos.css) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <!-- Contenedor principal que agrupa todo el contenido visible -->
+    <div class="contenedor">
+
+        <!-- Título principal del sistema -->
+        <h1>Sistema de Calificaciones</h1>
+
+        <!-- Subtítulo o texto de instrucción -->
+        <p>Captura las calificaciones del alumno</p>
+
+        <!-- Sección tipo formulario para organizar las entradas de datos -->
+        <div class="formulario">
+
+            <!-- Etiqueta explicativa vinculada al campo del nombre -->
+            <label for="nombre">Nombre del alumno:</label>
+            <!-- Campo de entrada de texto libre para el nombre del alumno -->
+            <input type="text" id="nombre" placeholder="Escribe el nombre">
+            
+            <!-- Etiqueta explicativa vinculada al campo de la edad -->
+            <label for="edad">Edad del alumno:</label>
+            <!-- Campo de entrada de texto para la edad -->
+            <input type="text" id="edad" placeholder="Escribe la edad">
+
+            <!-- Etiqueta explicativa para la calificación 1 -->
+            <label for="calificacion1">Calificación 1:</label>
+            <!-- Campo numérico del 0 al 10 para la nota 1 -->
+            <input type="number" id="calificacion1" min="0" max="10">
+
+            <!-- Etiqueta explicativa para la calificación 2 -->
+            <label for="calificacion2">Calificación 2:</label>
+            <!-- Campo numérico del 0 al 10 para la nota 2 -->
+            <input type="number" id="calificacion2" min="0" max="10">
+
+            <!-- Etiqueta explicativa para la calificación 3 -->
+            <label for="calificacion3">Calificación 3:</label>
+            <!-- Campo numérico del 0 al 10 para la nota 3 -->
+            <input type="number" id="calificacion3" min="0" max="10">
+            
+            <!-- Etiqueta explicativa para la calificación 4 -->
+            <label for="calificacion4">Calificación 4:</label>
+            <!-- Campo numérico del 0 al 10 para la nota 4 -->
+            <input type="number" id="calificacion4" min="0" max="10">
+
+            <!-- Botón que ejecuta la función JS calcularPromedio() al hacer clic -->
+            <button onclick="calcularPromedio()">
+                Calcular promedio
+            </button>
+            
+            <!-- Botón que ejecuta la función JS Agregar() al hacer clic -->
+            <button onclick="Agregar()">
+                Agregar
+            </button>
+
+            <!-- Botón que ejecuta la función JS Limpiar() al hacer clic -->
+            <button onclick="Limpiar()">
+                Limpiar
+            </button>
+
+        </div>
+
+        <!-- Div destino para inyectar dinámicamente el reporte de resultados -->
+        <div id="resultado" class="resultado">
+        </div>
+
+        <!-- Tabla HTML con borde y ancho al 100% para mostrar la lista acumulada -->
+        <table border="1" style="margin-top: 20px; width: 100%;">
+            <!-- Encabezado de la tabla -->
+            <thead>
+                <!-- Fila del encabezado -->
+                <tr>
+                    <!-- Columna de título para el contador de filas -->
+                    <th>#</th>
+                    <!-- Columna de título para el nombre -->
+                    <th>Nombre</th>
+                    <!-- Columna de título para la edad -->
+                    <th>Edad</th>
+                    <!-- Columna de título para el promedio -->
+                    <th>Promedio</th>
+                    <!-- Columna de título para el estatus cualitativo -->
+                    <th>Estatu</th>
+                </tr>
+            </thead>
+            <!-- Cuerpo de la tabla que se llenará con filas dinámicas mediante JS -->
+            <tbody id="cuerpoTabla">
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Enlaza el script de JavaScript (script.js) antes de cerrar el body -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
